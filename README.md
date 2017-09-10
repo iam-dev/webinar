@@ -1,6 +1,9 @@
 # Webinar Day 2
 Smart contract Web seminar Day 2
 
+https://docs.google.com/presentation/d/1Sa3B_C61U8NpaYuhcCvYfbGlu00wl0T8qInhcG8JOZ8/edit?usp=sharing
+
+
 
 ## BasicToken base on ERC20 standard
 ```
