@@ -124,11 +124,22 @@ geth --testnet --syncmode "fast" --unlock "0x18d54cca8608d90661244af0feb0a3d3ad3
 
 ## React JS
 ### Create-react-app
-https://github.com/facebookincubator/create-react-app
+```
+create-react-app webinar-client
+
+cd webinar-client
+
+npm start
+
+subl .
+```
+
+
+
 
 ### Add web in package.json
 ```
-“web3”: “version”
+"web3": "^1.0.0-beta.18"
 ```
 
 ### NPM Install
@@ -154,6 +165,12 @@ var webinarContract = ETHEREUM_CLIENT.eth.contract(webinarContractABI).at(webina
 
 Testrpc clients:
 ```
+var ETHEREUM_CLIENT = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+ar webinarContractABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"bytes32"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimal","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"bytes32"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"}];
+
+var webinarContractAddress = '0x88d0c8104828c8f3f3cfb03476838f50128a1e07';
+
 ETHEREUM_CLIENT.eth.accounts
 
 ETHEREUM_CLIENT.eth.contract(webinarContractABI)
@@ -164,7 +181,7 @@ ETHEREUM_CLIENT.eth.contract(varAbi).at(webinarContractAddress)
 ```
 Put it in variable:
 ```
- webinarContract = ETHEREUM_CLIENT.eth.contract(varAbi).at(webinarContractAddress)
+ webinarContract = ETHEREUM_CLIENT.eth.contract(webinarContractABI);
 ```
 
 Call function:
