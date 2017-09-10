@@ -93,3 +93,18 @@ webinar.totalSupply.call()
 webinar.balanceOf(account1)
 ```
 
+### Transfer Tokens to Account2
+```
+webinar.balanceOf(account2);
+webinar.transfer(account2, 100);
+webinar.balanceOf(account2);
+```
+
+## Ropsten Test net
+
+### Start geth
+####ropsten
+
+geth --testnet --syncmode "fast" --unlock "0x0bE9FC0FC5d2696edF93F9256F6871217695B4B6" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
+## Gilang ropsten
+geth --testnet --syncmode "fast" --unlock "0x18d54cca8608d90661244af0feb0a3d3ad367acd" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
