@@ -108,3 +108,33 @@ webinar.balanceOf(account2);
 geth --testnet --syncmode "fast" --unlock "0x0bE9FC0FC5d2696edF93F9256F6871217695B4B6" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
 ## Gilang ropsten
 geth --testnet --syncmode "fast" --unlock "0x18d54cca8608d90661244af0feb0a3d3ad367acd" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
+
+
+# Resources
+Join Our Smart Contracts telegram chat group: 
+https://t.me/joinchat/EboUckPgmA7hdCj3jJx-9A
+
+Join Our Slack:
+https://iam-developer.slack.com/
+
+Truffle:
+https://github.com/trufflesuite/truffle
+
+Testrpc:
+https://github.com/ethereumjs/testrpc
+
+
+ERC20:
+https://github.com/ethereum/eips/issues/20
+
+ERC223: 
+https://github.com/ethereum/EIPs/issues/223
+
+ERC23 Standard by IaM &lt;DEV&gt;:
+https://github.com/iam-dev/ERC23
+
+Indonesia Blockchain Group:
+https://t.me/idblockchainnetwork
+
+Sublime Text:
+https://www.sublimetext.com/
