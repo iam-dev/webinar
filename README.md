@@ -100,14 +100,72 @@ webinar.transfer(account2, 100);
 webinar.balanceOf(account2);
 ```
 
+### Create stringify ABI
+```
+JSON.stringify(webinar.deployed().abi)
+```
+
 ## Ropsten Test net
 
 ### Start geth
-####ropsten
-
+###ropsten
+```
 geth --testnet --syncmode "fast" --unlock "0x0bE9FC0FC5d2696edF93F9256F6871217695B4B6" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
-## Gilang ropsten
+```
+
+### Gilang ropsten
+```
 geth --testnet --syncmode "fast" --unlock "0x18d54cca8608d90661244af0feb0a3d3ad367acd" --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr localhost --rpcport 8546 console
+```
+
+
+## React JS
+### Create-react-app
+https://github.com/facebookincubator/create-react-app
+
+### Add web in package.json
+```
+“web3”: “version”
+```
+
+### NPM Install
+```
+NPM install
+```
+
+### Add web3 to react
+```
+import Web3 from 'web3';
+
+var ETHEREUM_CLIENT = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+
+var webinarContractABI = 
+
+var webinarContractAddress = '';
+
+var webinarContract = ETHEREUM_CLIENT.eth.contract(webinarContractABI).at(webinarContractAddress);
+```
+
+### Browser console
+
+Testrpc clients:
+```
+ETHEREUM_CLIENT.eth.accounts
+
+ETHEREUM_CLIENT.eth.contract(webinarContractABI)
+```
+
+Getting the actually contract address:
+ETHEREUM_CLIENT.eth.contract(varAbi).at(webinarContractAddress)
+```
+Put it in variable:
+```
+ webinarContract = ETHEREUM_CLIENT.eth.contract(varAbi).at(webinarContractAddress)
+```
+
+Call function:
+webinarContract.callFunction()
 
 
 # Resources
