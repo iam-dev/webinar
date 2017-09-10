@@ -102,9 +102,12 @@ webinar.balanceOf(account2);
 
 ### Create stringify ABI
 ```
-JSON.stringify(webinar.deployed().abi)
+JSON.stringify(webinar.abi)
 ```
-
+### Get webinar address
+```
+webinar.address
+```
 ## Ropsten Test net
 
 ### Start geth
